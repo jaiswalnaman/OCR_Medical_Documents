@@ -1,5 +1,5 @@
-!pip install -q transformers torch pillow groq python-dotenv pymupdf python-docx pdf2image numpy openai==0.28 gradio
-!apt-get update && apt-get install -y poppler-utils
+# pip install transformers torch pillow groq python-dotenv pymupdf python-docx pdf2image numpy openai==0.28 gradio
+# apt-get update && apt-get install -y poppler-utils
 #Florence- model link -https://huggingface.co/microsoft/Florence-2-large
 import os
 import torch
@@ -127,7 +127,7 @@ For each page:
 
 
        
-        openai.api_key = "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"
+        openai.api_key = "api_key"
         chat_completion = openai.ChatCompletion.create(
             model="gpt-4o-mini",
             messages=[

@@ -1,0 +1,12 @@
+torch>=2.0.0
+transformers>=4.30.0
+pillow>=9.0.0
+numpy>=1.20.0
+python-dotenv>=0.19.0
+openai==0.28.0
+PyMuPDF>=1.19.0
+python-docx>=0.8.11
+pdf2image>=1.16.0
+poppler-utils
+ipython>=7.0.0
+matplotlib>=3.4.0

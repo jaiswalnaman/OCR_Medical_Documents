@@ -153,7 +153,7 @@ For each page:
 3. Apply appropriate formatting for each page."""
 
 
-        openai.api_key = "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"
+        openai.api_key = "api_key"
         chat_completion = openai.ChatCompletion.create(
             model="gpt-4o-mini",
             messages=[
