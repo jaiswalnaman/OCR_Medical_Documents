@@ -23,8 +23,7 @@ try:
 except ImportError:
     print("PDF or DOCX support libraries not installed. Only image files will be processed.")
     PDF_SUPPORT = False
-
-# Add the missing PDF functions
+    
 def pdf_to_images(pdf_path):
     if not PDF_SUPPORT:
         raise ImportError("PDF support libraries not installed")
@@ -47,7 +46,7 @@ def docx_to_text(docx_path):
         print(f"Error extracting text from DOCX: {str(e)}")
         return ""
 
-# Global model variables - initialize once
+
 global_model = None
 global_processor = None
 def detect_document_type(text_content):
@@ -74,7 +73,7 @@ def detect_document_type(text_content):
     else:
         return "generic"
 
-# Document-specific enhancement prompts
+# Document-specific prompts
 ENHANCEMENT_PROMPTS = {
     "prescription": """You are a medical prescription expert. Correct OCR errors in medicine names, dosages and medical terms. Preserve numbers/dates. Format with in markdown format with clear sections for:
 1. Patient Info
@@ -166,7 +165,7 @@ def enhance_medical_text(text, doc_type=None):
 
         system_prompt = ENHANCEMENT_PROMPTS.get(doc_type, ENHANCEMENT_PROMPTS["generic"])
         
-        # Set API key directly
+        
         openai_api_key = "api_key"
         openai.api_key = openai_api_key
         
